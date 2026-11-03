@@ -1,0 +1,2 @@
+route_id,service_id,trip_id,trip_headsign,direction_id,block_id,shape_id,wheelchair_accessible,vehicle_journey_code
+120729,1448,VJ223ae116dda191a9ce5728795befdd2a47cc46fa,"Cribbs Causeway",1,1a5b43b4d565c6d094fa9379a876ea827efaf2ad,c491d34c-0dd6-40d9-a88e-d1510dddd212,0,"VJ4041"
