@@ -15,8 +15,11 @@ Please ensure you have a .env file with your API key for BODS and Google Maps.
 
 To run this script please pull the repo into a folder either by downloading it, using the GH CLI or using git. 
 
+**Download**
 >Press code, and click download ZIP https://github.com/maxfowlercodes/bus-system
+**GH CLI**
 >gh repo clone maxfowlercodes/bus-system
+**GIT Installed**
 >git init, git pull https://github.com/maxfowlercodes/bus-system.git
 
 When running the system it will first connect to the BODS API, to locate the busses currently running on the No.1 Route. 
