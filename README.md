@@ -16,10 +16,14 @@ To run this script please pull the repo into a folder either by downloading it, 
 
 Press **Code** and click **Download ZIP:**
 https://github.com/maxfowlercodes/bus-system
+
+
 **GH CLI**
-\\\gh repo clone maxfowlercodes/bus-system
+>gh repo clone maxfowlercodes/bus-system
+
+
 **Git**
-\\\git clone https://github.com/maxfowlercodes/bus-system.git
+>git clone https://github.com/maxfowlercodes/bus-system.git
 
 When running the system it will first connect to the BODS API, to locate the busses currently running on the No.1 Route. 
 It will gather the ID for each of them, and their latititude and longditude. It will then use google maps to place these co-ordinates. 
