@@ -4,8 +4,14 @@ from dotenv import load_dotenv
 import os
 import webbrowser
 import gmplot
+import csv
+import pandas
+
+from io import StringIO
+
 
 vehiclelats = []
+
 vehiclelongs = []
 
 load_dotenv()
@@ -19,7 +25,7 @@ params = {
 }
 
 url = "https://data.bus-data.dft.gov.uk/api/v1/gtfsrtdatafeed/"
-
+data = pandas.read_csv("trips.csv")     
 response = requests.get(url, params=params)
 
 feed = gtfs_realtime_pb2.FeedMessage()
@@ -36,19 +42,37 @@ print(response.status_code)
 for entity in feed.entity:
     if entity.HasField("vehicle"):
         vehicle = entity.vehicle
-        vehicleid = vehicle.trip.route_id
+        routeID = vehicle.trip.route_id
         vehiclelat = vehicle.position.latitude
         vehiclelong = vehicle.position.longitude
+        vehicledestination = vehicle.trip.trip_id
+        vehicle_id = vehicle.vehicle.id
 
-        if vehicleid == "120483" or vehicleid == "120729" or vehicleid == "120860":
-            print("Vehicle ID: ", vehicle.vehicle.id)
-            print("Route: ", vehicle.trip.route_id)
+        if routeID == "120483" or routeID == "120729" or routeID == "120860":
             
-            vehiclelats.append(vehiclelat)
-            vehiclelongs.append(vehiclelong)
-            
+            if vehicle_id != "FBRI-30195" and vehicle_id != "FBRI-30193" and vehicle_id != "FBRI-37425" and vehicle_id != "FBRI-39439" and routeID != "FBRI-39408":
+                filtered_data = data[data["trip_id"] == vehicledestination]
+                headsign = filtered_data.iloc[0]["trip_headsign"]
+                
+                print("Vehicle ID: ", vehicle_id)
+                print("Route: ", routeID)
+                print("Destination: ", headsign)
+                vehiclelats.append(vehiclelat)
+                vehiclelongs.append(vehiclelong)
+                
+                
+                if headsign == "Broomhill":
+                    gmap3.marker(vehiclelat, vehiclelong, title=routeID + " to " + headsign + " " + vehicle_id, color="blue")
+                elif headsign == "Cribbs Causeway":
+                    gmap3.marker(vehiclelat, vehiclelong, title=routeID + " to " + headsign + " " + vehicle_id, color="red")
+                else:
+                    print("Failed marker")
+            else:
+                print("Removed odd bus")
+
+          
 
 
-gmap3.scatter(vehiclelats, vehiclelongs, '#FF0000', size = 40, marker = False)
+
 gmap3.draw(r"C:\Users\maxfo\Desktop\Bus System\map3.html")
 webbrowser.open_new_tab(r"C:\Users\maxfo\Desktop\Bus System\map3.html")
