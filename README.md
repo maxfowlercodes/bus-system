@@ -4,7 +4,7 @@
 **Please note this system is currently only built for the No.1 Bus service within Bristol**
 
 Before running the python script please install the dependancies. 
->pip install gtfs-realtime-bindings gmplot python-dotenv
+>pip install gtfs-realtime-bindings gmplot python-dotenv pandas
 
 Please ensure you have a .env file with your API key for BODS and Google Maps.
 

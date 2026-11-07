@@ -7,34 +7,8 @@
 <script type="text/javascript">
     function initialize() {
         var map = new google.maps.Map(document.getElementById("map_canvas"), {
-            zoom: 18,
+            zoom: 12,
             center: new google.maps.LatLng(51.455989, -2.592673)
-        });
-
-        var marker_icon_FF0000 = {
-            url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAABmJLR0QA/wD/AP+gvaeTAAACBklEQVRIia3VzUtUURgH4GdG/AiyZZShtWgXUbSIFtGqRYtqWRLhXyBYf0K6MaJQ2gRtayHtijYpleHKSCgIcRHoIiOSKEzLKea0OOeqTfPlzPzg5Qwz9zz3nXPvPTeneo7gNA4gjyI+Ygbva8z9L2cxi9BHOE+4msY+gliz6biayWE0R7GfMEcoEkJJzRH6CbnY+WiaVxEc6yY8KQOVq8eE7tj1WCV4qIswUyeY1QyhK8JDpWAP1m7vEMzqTkTXkrOZkYOEQoNogXAowiPE2wQuDqC9nktZJu0YSE72XRs2phrsMqup2OkG2vLpRB19DXaZJc3vQHv294Um0e3z8yigsNQkmuYXUMie5/npJtE0fz55YLiXsNHELdUbV2B4+4n2Y/Vmg+itCK4m558MdhBe7hCcJnRGdLDS0ox3E17XCb4h7IngeLX1zuFhD2G5BriytY4Tqmx9WXbh3Tnl99KsLkdwAbtrgVmO4/eDCuCkzd3/TL1glru9hF8lYJFwMoKPdgrCXqzfL0GfR7CIo42gcO9YCXopolONgnAC4W0Cv9l8dVxpBoWFGwmdiOC6Glc8X+3HlKeT6cOzOLzAjyaaBBc602ZzOHZ6vVkQ9kl7Qi6ip1qBwpdrEfwjPnFVU8+awuKrOC7hZ6vQlQ9baM3Ui379HsfVVqKf07jcSvRTGhfrOfgvIP3ECS77BDoAAAAASUVORK5CYII=",
-            labelOrigin: new google.maps.Point(10, 11)
-        };
-
-        new google.maps.Marker({
-            position: new google.maps.LatLng(51.507378, -2.631086),
-            title: "120729 to Cribbs Causeway FBRI-30168",
-            icon: marker_icon_FF0000,
-            map: map
-        });
-
-        new google.maps.Marker({
-            position: new google.maps.LatLng(51.441547, -2.558328),
-            title: "120729 to Cribbs Causeway FBRI-30178",
-            icon: marker_icon_FF0000,
-            map: map
-        });
-
-        new google.maps.Marker({
-            position: new google.maps.LatLng(51.519131, -2.621992),
-            title: "120729 to Cribbs Causeway FBRI-37336",
-            icon: marker_icon_FF0000,
-            map: map
         });
 
         var marker_icon_0000FF = {
@@ -43,51 +17,91 @@
         };
 
         new google.maps.Marker({
-            position: new google.maps.LatLng(51.453457, -2.597820),
-            title: "120729 to Broomhill FBRI-37602",
+            position: new google.maps.LatLng(51.526718, -2.596031),
+            title: "120729 to Cribbs Causeway FBRI-30169",
             icon: marker_icon_0000FF,
             map: map
         });
 
+        var marker_icon_FF0000 = {
+            url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAABmJLR0QA/wD/AP+gvaeTAAACBklEQVRIia3VzUtUURgH4GdG/AiyZZShtWgXUbSIFtGqRYtqWRLhXyBYf0K6MaJQ2gRtayHtijYpleHKSCgIcRHoIiOSKEzLKea0OOeqTfPlzPzg5Qwz9zz3nXPvPTeneo7gNA4gjyI+Ygbva8z9L2cxi9BHOE+4msY+gliz6biayWE0R7GfMEcoEkJJzRH6CbnY+WiaVxEc6yY8KQOVq8eE7tj1WCV4qIswUyeY1QyhK8JDpWAP1m7vEMzqTkTXkrOZkYOEQoNogXAowiPE2wQuDqC9nktZJu0YSE72XRs2phrsMqup2OkG2vLpRB19DXaZJc3vQHv294Um0e3z8yigsNQkmuYXUMie5/npJtE0fz55YLiXsNHELdUbV2B4+4n2Y/Vmg+itCK4m558MdhBe7hCcJnRGdLDS0ox3E17XCb4h7IngeLX1zuFhD2G5BriytY4Tqmx9WXbh3Tnl99KsLkdwAbtrgVmO4/eDCuCkzd3/TL1glru9hF8lYJFwMoKPdgrCXqzfL0GfR7CIo42gcO9YCXopolONgnAC4W0Cv9l8dVxpBoWFGwmdiOC6Glc8X+3HlKeT6cOzOLzAjyaaBBc602ZzOHZ6vVkQ9kl7Qi6ip1qBwpdrEfwjPnFVU8+awuKrOC7hZ6vQlQ9baM3Ui379HsfVVqKf07jcSvRTGhfrOfgvIP3ECS77BDoAAAAASUVORK5CYII=",
+            labelOrigin: new google.maps.Point(10, 11)
+        };
+
         new google.maps.Marker({
-            position: new google.maps.LatLng(51.459328, -2.586705),
-            title: "120729 to Cribbs Causeway FBRI-39408",
+            position: new google.maps.LatLng(51.436848, -2.531849),
+            title: "120729 to Broadmead FBRI-30196",
             icon: marker_icon_FF0000,
             map: map
         });
 
         new google.maps.Marker({
-            position: new google.maps.LatLng(51.460983, -2.608493),
-            title: "120729 to Cribbs Causeway FBRI-39414",
+            position: new google.maps.LatLng(51.459122, -2.608718),
+            title: "120729 to Cribbs Causeway FBRI-37322",
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(51.508186, -2.631024),
+            title: "120729 to Broadmead FBRI-37357",
             icon: marker_icon_FF0000,
             map: map
         });
 
         new google.maps.Marker({
-            position: new google.maps.LatLng(51.478935, -2.616769),
-            title: "120729 to Broomhill FBRI-39420",
-            icon: marker_icon_0000FF,
-            map: map
-        });
-
-        new google.maps.Marker({
-            position: new google.maps.LatLng(51.457596, -2.594348),
-            title: "120729 to Broomhill FBRI-39435",
-            icon: marker_icon_0000FF,
-            map: map
-        });
-
-        new google.maps.Marker({
-            position: new google.maps.LatLng(51.468075, -2.613080),
-            title: "120729 to Cribbs Causeway FBRI-39436",
+            position: new google.maps.LatLng(51.436966, -2.532613),
+            title: "120729 to Broadmead FBRI-37642",
             icon: marker_icon_FF0000,
             map: map
         });
 
         new google.maps.Marker({
-            position: new google.maps.LatLng(51.442383, -2.564206),
-            title: "120729 to Broomhill FBRI-39461",
+            position: new google.maps.LatLng(51.457291, -2.584765),
+            title: "120729 to Cribbs Causeway FBRI-39409",
             icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(51.453400, -2.597628),
+            title: "120729 to Broadmead FBRI-39410",
+            icon: marker_icon_FF0000,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(51.436768, -2.532133),
+            title: "120729 to Cribbs Causeway FBRI-39412",
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(51.506645, -2.628232),
+            title: "120729 to Cribbs Causeway FBRI-39416",
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(51.436844, -2.531944),
+            title: "120729 to Broadmead FBRI-39432",
+            icon: marker_icon_FF0000,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(51.437122, -2.531776),
+            title: "120729 to Broadmead FBRI-39446",
+            icon: marker_icon_FF0000,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(51.420380, -2.587103),
+            title: "120729 to Broadmead FBRI-Training_ETM_HG",
+            icon: marker_icon_FF0000,
             map: map
         });
 
