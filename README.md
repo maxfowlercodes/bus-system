@@ -27,4 +27,6 @@ https://github.com/maxfowlercodes/bus-system
 
 When running the system it will first connect to the BODS API, to locate the busses currently running on the No.1 Route. 
 It will gather the ID for each of them, and their latititude and longditude. It will then use google maps to place these co-ordinates. 
-Please note it can take a few seconds to start up, and sometimes a wrong bus is picked up, but this is being looked into and there is continued work on it. 
+Please note it can take a few seconds to start up, any wrong buses have been fixed, and the colour coding is now setup for buses. 
+
+Arrows will soon be implemented to support this.
