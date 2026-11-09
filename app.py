@@ -10,6 +10,11 @@ import pyautogui
 import time
 from io import StringIO
 
+""" 
+    End of imports. 
+    PyautoGUI has not been added to readme.md yet
+    Add this and arrows next.
+"""
 
 vehiclelats = []
 opened = False
