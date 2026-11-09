@@ -30,4 +30,4 @@ It will gather the ID for each of them, and their latititude and longditude. It 
 Please note it can take a few seconds to start up, any wrong buses have been fixed, and the colour coding is now setup for buses. 
 
 Arrows will soon be implemented to support this on the HTML page, as well as introducing bus reloading without reloading the whole page.
-Currently this is done using pyautogui but it will be replaced with potential server calling without reloading. 
+Currently this is done using pyautogui but it will be replaced with potential server calling without reloading.
