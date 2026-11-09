@@ -29,4 +29,5 @@ When running the system it will first connect to the BODS API, to locate the bus
 It will gather the ID for each of them, and their latititude and longditude. It will then use google maps to place these co-ordinates. 
 Please note it can take a few seconds to start up, any wrong buses have been fixed, and the colour coding is now setup for buses. 
 
-Arrows will soon be implemented to support this.
+Arrows will soon be implemented to support this on the HTML page, as well as introducing bus reloading without reloading the whole page.
+Currently this is done using pyautogui but it will be replaced with potential server calling without reloading. 
