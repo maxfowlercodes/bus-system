@@ -64,8 +64,10 @@ for x in range(10):
                     
                     if direction == 1:
                         gmap3.marker(vehiclelat, vehiclelong, title=routeID + " to Cribbs Causeway " + vehicle_id, color="blue")
+                        print("Bus logged to Cribbs")
                     elif direction == 0:
                         gmap3.marker(vehiclelat, vehiclelong, title=routeID + " to Broadmead " + vehicle_id, color="red")
+                        print("Bus logged to City Centre")
                     else:
                         print("Failed marker")
                 else:
